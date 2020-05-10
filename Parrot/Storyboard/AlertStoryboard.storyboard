@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Alert ViewVC-->
+        <scene sceneID="d5s-Xu-RHJ">
+            <objects>
+                <viewController storyboardIdentifier="AlertViewVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="Tms-QJ-7w2" customClass="AlertViewVC" customModule="Hi_Parrot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nQm-x9-68k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bVs-71-3RC">
+                                <rect key="frame" x="39.5" y="345" width="335" height="206"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REPORT VOICE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avO-4Z-Kql">
+                                        <rect key="frame" x="0.0" y="60" width="335" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JpK-B0-vNJ">
+                                        <rect key="frame" x="138" y="139" width="80" height="40"/>
+                                        <color key="backgroundColor" name="noti_color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="BXi-rV-aVo"/>
+                                            <constraint firstAttribute="width" constant="80" id="WRa-m9-LyE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="CANCEL">
+                                            <color key="titleColor" name="bg_white"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapCancel:" destination="Tms-QJ-7w2" eventType="touchUpInside" id="ESi-kQ-CJk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7Y-Te-wGw">
+                                        <rect key="frame" x="228" y="139" width="80" height="40"/>
+                                        <color key="backgroundColor" name="next_but"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="OK">
+                                            <color key="titleColor" name="bg_white"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapOK:" destination="Tms-QJ-7w2" eventType="touchUpInside" id="CUi-Qh-3Sh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="B7Y-Te-wGw" firstAttribute="leading" secondItem="JpK-B0-vNJ" secondAttribute="trailing" constant="10" id="8ox-pp-OvE"/>
+                                    <constraint firstAttribute="trailing" secondItem="avO-4Z-Kql" secondAttribute="trailing" id="DSh-4Q-hde"/>
+                                    <constraint firstItem="avO-4Z-Kql" firstAttribute="leading" secondItem="bVs-71-3RC" secondAttribute="leading" id="HfT-Y2-ssR"/>
+                                    <constraint firstItem="avO-4Z-Kql" firstAttribute="top" secondItem="bVs-71-3RC" secondAttribute="top" constant="60" id="OFV-ho-cJY"/>
+                                    <constraint firstAttribute="trailing" secondItem="B7Y-Te-wGw" secondAttribute="trailing" constant="27" id="Ovn-7I-1lo"/>
+                                    <constraint firstAttribute="width" constant="335" id="bKl-3Z-0Qx"/>
+                                    <constraint firstAttribute="bottom" secondItem="JpK-B0-vNJ" secondAttribute="bottom" constant="27" id="fiX-Th-rfj"/>
+                                    <constraint firstItem="JpK-B0-vNJ" firstAttribute="top" secondItem="avO-4Z-Kql" secondAttribute="bottom" constant="43" id="jQp-t1-2lN"/>
+                                    <constraint firstItem="B7Y-Te-wGw" firstAttribute="height" secondItem="JpK-B0-vNJ" secondAttribute="height" id="jZW-K6-jGA"/>
+                                    <constraint firstAttribute="bottom" secondItem="B7Y-Te-wGw" secondAttribute="bottom" constant="27" id="jsc-On-Aml"/>
+                                    <constraint firstItem="avO-4Z-Kql" firstAttribute="centerX" secondItem="bVs-71-3RC" secondAttribute="centerX" id="nv9-K8-Ppl"/>
+                                    <constraint firstItem="B7Y-Te-wGw" firstAttribute="width" secondItem="JpK-B0-vNJ" secondAttribute="width" id="pGc-5D-bMO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bVs-71-3RC" firstAttribute="centerY" secondItem="nQm-x9-68k" secondAttribute="centerY" id="GZE-Y6-mvl"/>
+                            <constraint firstItem="bVs-71-3RC" firstAttribute="centerX" secondItem="nQm-x9-68k" secondAttribute="centerX" id="lsA-Dd-Ju0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Stz-A6-CjG"/>
+                    </view>
+                    <connections>
+                        <outlet property="butOK" destination="B7Y-Te-wGw" id="wal-rw-WbW"/>
+                        <outlet property="lblTitle" destination="avO-4Z-Kql" id="YY8-0b-JOS"/>
+                        <outlet property="viwContent" destination="bVs-71-3RC" id="pOR-FC-huG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vCm-Zs-Y7R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2460.8695652173915" y="709.82142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="bg_white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="next_but">
+            <color red="0.54117647058823526" green="0.33333333333333331" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="noti_color">
+            <color red="0.58431372549019611" green="0.59999999999999998" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
